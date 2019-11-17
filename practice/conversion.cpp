@@ -1,4 +1,4 @@
-/* conversion.cpp-- 数值转换 */
+/* conversion.cpp-- 数制转换 */
 #include<stdio.h>
 #include<stdlib.h>
 #define STACK_INIT_SIZE 100
@@ -21,28 +21,36 @@ ElemType GetTop(SqStack &S);
 Status Push(SqStack &S,ElemType add);
 Status Pop(SqStack &S,ElemType &del); 
 Status StackLength(SqStack &S);
+Status conversion(int num,int bit); 
 int main(void)
 {
-	int num,len,i;
+	int num,bit;
+	while(scanf("%d",&num)&&num)
+	{
+		printf("进制输入：");
+		scanf("%d",&bit);
+		conversion(num,bit);
+	}
+	return 0;
+}
+Status conversion(int num,int bit)
+{
+	int len,i;
 	SqStack S;
 	ElemType del;
 	InitStack(S);
-	while(scanf("%d",&num))
+	while(num!=0)
 	{
-		while(num!=0)
-		{
-			Push(S,num%8);
-			num/=8;
-		}
-		len=StackLength(S);
-		for(i=0;i<len;i++)
-		{
-			Pop(S,del);
-			printf("%d",del);
-		}
-		printf("\n");
+		Push(S,num%bit);
+		num/=bit;
 	}
-	return 0;
+	len=StackLength(S);
+	for(i=0;i<len;i++)
+	{
+		Pop(S,del);
+		printf("%d",del);
+	}
+	printf("\n");
 }
 Status InitStack(SqStack &S)
 {

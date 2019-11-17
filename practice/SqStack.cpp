@@ -255,7 +255,7 @@ Status StackEmpty(SqStack &S)
 }
 ElemType GetTop(SqStack &S)
 {
-	return *(S.top);
+	return *(S.top-1);
 }
 int StackLength(SqStack &S)
 {
