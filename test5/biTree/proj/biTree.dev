@@ -29,7 +29,7 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=0000000000000000001000000
-UnitCount=8
+UnitCount=10
 
 [VersionInfo]
 Major=1
@@ -124,6 +124,26 @@ BuildCmd=
 FileName=base.h
 CompileCpp=1
 Folder=proj
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit9]
+FileName=..\Queue\LinkQueue.h
+CompileCpp=1
+Folder=Queue
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit10]
+FileName=..\Queue\LinkQueue.cpp
+CompileCpp=1
+Folder=Queue
 Compile=1
 Link=1
 Priority=1000

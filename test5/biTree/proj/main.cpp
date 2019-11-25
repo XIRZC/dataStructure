@@ -9,6 +9,9 @@ int main(void)
 {
 	int flag=-1,num;
 	BiTree tree,tree1,tree2;
+	CreateBiTree(tree);
+	printf("该二叉树%s完全二叉树\n",IsCompleteBiTree(tree)?"为":"不为");
+	/*
 	order();
 	printf("创建单操作二叉树tree\n");
 	CreateBiTree(tree);getchar();  //读取掉换行符以免影响下一个的创建 
@@ -49,7 +52,7 @@ int main(void)
 			case 9:
 				printf("该二叉树%s满二叉树\n",IsFullBiTree(tree)?"为":"不为");break;
 		}
-	}
+	}*/
 	return 0;
 }
 void order(void)

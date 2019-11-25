@@ -1,6 +1,7 @@
 /* biTree.cpp -- 二叉树的基本操作*/ 
 #include"biTree.h"
 #include"../Stack/SqStack.h"
+#include"../Queue/LinkQueue.h"
 #include"../Queue/SqQueue.h"
 Status DestroyBiTree(BiTree &T)
 {
@@ -35,7 +36,7 @@ Status IsCompleteBiTree(BiTree T)
 {
 	//完全二叉树例子：1248  9  5A  B  36C   7  // 
 	int flag=0;
-	SqQueue Q;
+	LinkQueue Q;
 	InitQueue(Q);
 	BiTNode *head=NULL;
 	if(!T)  return 1;  //空二叉树是完全二叉树 
@@ -61,7 +62,7 @@ Status IsCompleteBiTree(BiTree T)
 } 
 Status LevelOrderTraverse(BiTree T,Status(* visit)(TElemType elem))
 {
-	SqQueue Q;
+	LinkQueue Q;
 	InitQueue(Q);
 	BiTNode *head=NULL;
 	if(!T)  return 0;
