@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1578047553 source:d:\git\codeblocks\sort\main.cpp
+	<stdio.h>
+	<stdlib.h>
+
